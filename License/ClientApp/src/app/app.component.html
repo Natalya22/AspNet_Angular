@@ -1,83 +1,85 @@
-<h1>Список лицензий:</h1>
-<div>
-    <input type="button" value="Добавить" class="btn btn-sm btn-primary" (click)="add()" />
-    <input type="text" id="search" (onblur)="search()" placeholder="Search for organization..." style="text-align: justify; justify-content: right;" />
+<div style="padding:2rem">
+    <h1>Список лицензий:</h1>
+    <div style = "width: 100%; display: flex; justify-content: space-between;">
+        <input type="button" value="Добавить" class="btn btn-sm btn-primary" (click)="add()" />
+        <input type="text" id="search" (change)="search()" placeholder="Search for organization..." />
+    </div>
+    <table *ngIf="tableMode; else create" class="table table-striped" id="licenseTable">
+        <thead>
+            <tr>
+                <td>Организация</td>
+                <td>Серийный номер</td>
+                <td>Дата выдачи</td>
+                <td>Срок действия</td>
+                <td>Период</td>
+                <td></td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of licenses">
+                <ng-template [ngIf]="license?.id != item?.id" [ngIfElse]="edit">
+                    <td>{{item?.organization}}</td>
+                    <td>{{item?.serialNumber}}</td>
+                    <td>{{item?.issueDate}}</td>
+                    <td>{{item?.validity}}</td>
+                    <td>{{item?.period}}</td>
+                    <td>
+                        <button class="btn btn-sm btn-success" (click)="editLicense(item)">Изменить</button>
+                        <button class="btn btn-sm btn-danger" (click)="delete(item)">Удалить</button>
+                    </td>
+                </ng-template>
+            </tr>
+        </tbody>
+    </table>
+     
+    <!--шаблон для редактирования-->
+    <ng-template #edit>
+        <td>
+            <input type="text" [(ngModel)]="license.organization" class="form-control" />
+        </td>
+        <td>
+            <input type="text" [(ngModel)]="license.serialNumber" class="form-control" />
+        </td>
+        <td>
+            <input type="datetime" [(ngModel)]="license.issueDate" class="form-control" />
+        </td>
+        <td>
+            <input type="number" [(ngModel)]="license.validity" class="form-control" />
+        </td>
+        <td>
+            <input type="number" [(ngModel)]="license.period" class="form-control" />
+        </td>
+        <td>
+            <input type="button" value="Сохранить" (click)="save()" class="btn btn-sm btn-success" />
+            <input type="button" value="Отмена" (click)="cancel()" class="btn btn-sm btn-warning" />
+        </td>
+    </ng-template>
+     
+    <!--шаблон для добавления-->
+    <ng-template #create>
+        <div class="form-group">
+            <label>Организация</label>
+            <input type="text" [(ngModel)]="license.organization" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label>Серийный номер</label>
+            <input type="text" [(ngModel)]="license.serialNumber" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label>Дата выдачи</label>
+            <input type="datetime" [(ngModel)]="license.issueDate" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label>Срок действия</label>
+            <input type="number" [(ngModel)]="license.validity" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label>Период</label>
+            <input type="number" [(ngModel)]="license.period" class="form-control" />
+        </div>
+        <div>
+            <input type="button" value="Сохранить" (click)="save()" class="btn btn-success" />
+            <input type="button" value="Отмена" (click)="cancel()" class="btn btn-warning" />
+        </div>
+    </ng-template>
 </div>
-<table *ngIf="tableMode; else create" class="table table-striped" id="licenseTable">
-    <thead>
-        <tr>
-            <td>Организация</td>
-            <td>Серийный номер</td>
-            <td>Дата выдачи</td>
-            <td>Срок действия</td>
-            <td>Период</td>
-            <td></td>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let item of licenses">
-            <ng-template [ngIf]="license?.id != item?.id" [ngIfElse]="edit">
-                <td>{{item?.organization}}</td>
-                <td>{{item?.serialNumber}}</td>
-                <td>{{item?.issueDate}}</td>
-                <td>{{item?.validity}}</td>
-                <td>{{item?.period}}</td>
-                <td>
-                    <button class="btn btn-sm btn-success" (click)="editLicense(item)">Изменить</button>
-                    <button class="btn btn-sm btn-danger" (click)="delete(item)">Удалить</button>
-                </td>
-            </ng-template>
-        </tr>
-    </tbody>
-</table>
- 
-<!--шаблон для редактирования-->
-<ng-template #edit>
-    <td>
-        <input type="text" [(ngModel)]="license.organization" class="form-control" />
-    </td>
-    <td>
-        <input type="text" [(ngModel)]="license.serialNumber" class="form-control" />
-    </td>
-    <td>
-        <input type="datetime" [(ngModel)]="license.issueDate" class="form-control" />
-    </td>
-    <td>
-        <input type="number" [(ngModel)]="license.validity" class="form-control" />
-    </td>
-    <td>
-        <input type="number" [(ngModel)]="license.period" class="form-control" />
-    </td>
-    <td>
-        <input type="button" value="Сохранить" (click)="save()" class="btn btn-sm btn-success" />
-        <input type="button" value="Отмена" (click)="cancel()" class="btn btn-sm btn-warning" />
-    </td>
-</ng-template>
- 
-<!--шаблон для добавления-->
-<ng-template #create>
-    <div class="form-group">
-        <label>Организация</label>
-        <input type="text" [(ngModel)]="license.organization" class="form-control" />
-    </div>
-    <div class="form-group">
-        <label>Серийный номер</label>
-        <input type="text" [(ngModel)]="license.serialNumber" class="form-control" />
-    </div>
-    <div class="form-group">
-        <label>Дата выдачи</label>
-        <input type="datetime" [(ngModel)]="license.issueDate" class="form-control" />
-    </div>
-    <div class="form-group">
-        <label>Срок действия</label>
-        <input type="number" [(ngModel)]="license.validity" class="form-control" />
-    </div>
-    <div class="form-group">
-        <label>Период</label>
-        <input type="number" [(ngModel)]="license.period" class="form-control" />
-    </div>
-    <div>
-        <input type="button" value="Сохранить" (click)="save()" class="btn btn-success" />
-        <input type="button" value="Отмена" (click)="cancel()" class="btn btn-warning" />
-    </div>
-</ng-template>
