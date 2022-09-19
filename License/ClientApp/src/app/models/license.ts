@@ -7,4 +7,5 @@ export class License {
     public issueDate: string;
     public validity: number;
     public period: Period;
+    public digitalSignature: string;
 }

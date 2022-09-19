@@ -11,5 +11,6 @@ namespace License.Models
         public DateTime IssueDate { get; set; } // дата выдачи
         public int Validity { get; set; } // срок действия
         public Period period { get; set; } // период
+        public string DigitalSignature { get; set; } // цифровая подпись
     }
 }

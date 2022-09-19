@@ -144,3 +144,6 @@ C:\Users\Lenovo\Desktop\homeProject\LicenseProject\License\License\bin\Debug\net
 C:\Users\Lenovo\Desktop\homeProject\LicenseProject\License\License\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\Lenovo\Desktop\homeProject\LicenseProject\License\License\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\Lenovo\Desktop\homeProject\LicenseProject\License\License\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Lenovo\Desktop\homeProject\LicenseProject\License\License\bin\Debug\netcoreapp3.1\libman.json
+C:\Users\Lenovo\Desktop\homeProject\LicenseProject\License\License\bin\Debug\netcoreapp3.1\Microsoft.Practices.ServiceLocation.dll
+C:\Users\Lenovo\Desktop\homeProject\LicenseProject\License\License\bin\Debug\netcoreapp3.1\XAct.Core.PCL.dll

@@ -1,2 +1,4 @@
 ClientApp/node_modules
-../.vs
+../.vs/
+bin/
+obj/

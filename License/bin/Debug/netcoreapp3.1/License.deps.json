@@ -34,11 +34,12 @@
           "Microsoft.AspNetCore.SpaServices.Extensions": "3.1.29",
           "Microsoft.EntityFrameworkCore": "3.1.29",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.25",
-          "Microsoft.EntityFrameworkCore.Tools": "3.1.25",
+          "Microsoft.EntityFrameworkCore.Tools": "3.1.29",
           "Microsoft.OpenApi": "1.4.2",
           "Microsoft.TypeScript.MSBuild": "4.8.3",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "3.1.5",
           "Swashbuckle.AspNetCore": "6.4.0",
+          "XAct.Core.PCL": "0.0.5014",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "3.1.0.0",
@@ -308,6 +309,17 @@
         },
         "compile": {
           "License.dll": {}
+        }
+      },
+      "CommonServiceLocator/1.3.0": {
+        "runtime": {
+          "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.dll": {
+            "assemblyVersion": "1.3.0.0",
+            "fileVersion": "1.3.0.0"
+          }
+        },
+        "compile": {
+          "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.dll": {}
         }
       },
       "Microsoft.AspNetCore.Html.Abstractions/2.2.0": {
@@ -721,26 +733,26 @@
         }
       },
       "Microsoft.EntityFrameworkCore.Analyzers/3.1.29": {},
-      "Microsoft.EntityFrameworkCore.Design/3.1.25": {
+      "Microsoft.EntityFrameworkCore.Design/3.1.29": {
         "dependencies": {
           "Microsoft.CSharp": "4.7.0",
-          "Microsoft.EntityFrameworkCore.Relational": "3.1.25"
+          "Microsoft.EntityFrameworkCore.Relational": "3.1.29"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Design.dll": {
-            "assemblyVersion": "3.1.25.0",
-            "fileVersion": "3.100.2522.21812"
+            "assemblyVersion": "3.1.29.0",
+            "fileVersion": "3.100.2922.41722"
           }
         }
       },
-      "Microsoft.EntityFrameworkCore.Relational/3.1.25": {
+      "Microsoft.EntityFrameworkCore.Relational/3.1.29": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "3.1.29"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Relational.dll": {
-            "assemblyVersion": "3.1.25.0",
-            "fileVersion": "3.100.2522.21812"
+            "assemblyVersion": "3.1.29.0",
+            "fileVersion": "3.100.2922.41722"
           }
         },
         "compile": {
@@ -750,7 +762,7 @@
       "Microsoft.EntityFrameworkCore.SqlServer/3.1.25": {
         "dependencies": {
           "Microsoft.Data.SqlClient": "1.1.3",
-          "Microsoft.EntityFrameworkCore.Relational": "3.1.25"
+          "Microsoft.EntityFrameworkCore.Relational": "3.1.29"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.EntityFrameworkCore.SqlServer.dll": {
@@ -762,9 +774,9 @@
           "lib/netstandard2.0/Microsoft.EntityFrameworkCore.SqlServer.dll": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.Tools/3.1.25": {
+      "Microsoft.EntityFrameworkCore.Tools/3.1.29": {
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Design": "3.1.25"
+          "Microsoft.EntityFrameworkCore.Design": "3.1.29"
         }
       },
       "Microsoft.Extensions.ApiDescription.Server/6.0.5": {},
@@ -2392,6 +2404,20 @@
           "System.Xml.XmlDocument": "4.3.0"
         }
       },
+      "XAct.Core.PCL/0.0.5014": {
+        "dependencies": {
+          "CommonServiceLocator": "1.3.0"
+        },
+        "runtime": {
+          "lib/portable-win+net45+sl50+wp80/XAct.Core.PCL.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "0.0.5014.0"
+          }
+        },
+        "compile": {
+          "lib/portable-win+net45+sl50+wp80/XAct.Core.PCL.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Antiforgery/3.1.0.0": {
         "compile": {
           "Microsoft.AspNetCore.Antiforgery.dll": {}
@@ -3978,6 +4004,13 @@
       "serviceable": false,
       "sha512": ""
     },
+    "CommonServiceLocator/1.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-fbjO0SNwbOFPdwVfyqv+B7gIJ2CVBOFPKqn1mDDECK7KER8jFaOdcvroFYoAHa0ktPbxi5s+15qOLnA96f8GSA==",
+      "path": "commonservicelocator/1.3.0",
+      "hashPath": "commonservicelocator.1.3.0.nupkg.sha512"
+    },
     "Microsoft.AspNetCore.Html.Abstractions/2.2.0": {
       "type": "package",
       "serviceable": true,
@@ -4118,19 +4151,19 @@
       "path": "microsoft.entityframeworkcore.analyzers/3.1.29",
       "hashPath": "microsoft.entityframeworkcore.analyzers.3.1.29.nupkg.sha512"
     },
-    "Microsoft.EntityFrameworkCore.Design/3.1.25": {
+    "Microsoft.EntityFrameworkCore.Design/3.1.29": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Bpo1i2Dj4eE57eLMnmT8sPe2EEwF2wCSeFhdsssaNXF3Cx6/7XuPZLlmvsDikyC+gO9m9YwEB4VZIh/2noBZbg==",
-      "path": "microsoft.entityframeworkcore.design/3.1.25",
-      "hashPath": "microsoft.entityframeworkcore.design.3.1.25.nupkg.sha512"
+      "sha512": "sha512-Oh1BBXloKrghW9NtntSkiNxwqfY6e0OKxjAGZW8MwmNZXj+nkZqw4EGK4aXLzjwhIlDPcqxODM66vZSlcoRjvw==",
+      "path": "microsoft.entityframeworkcore.design/3.1.29",
+      "hashPath": "microsoft.entityframeworkcore.design.3.1.29.nupkg.sha512"
     },
-    "Microsoft.EntityFrameworkCore.Relational/3.1.25": {
+    "Microsoft.EntityFrameworkCore.Relational/3.1.29": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-wpoMgKgljoafr5ublMeewqR1Dg7zhbqT2S9vQ6BPvQwJzZR2MT5YCkNx1ypCn9dY3G1I05MimKSkMN5+iBETRQ==",
-      "path": "microsoft.entityframeworkcore.relational/3.1.25",
-      "hashPath": "microsoft.entityframeworkcore.relational.3.1.25.nupkg.sha512"
+      "sha512": "sha512-4ytgp6kpGFMgi6gI4UbLjIJqf7hLs+XgfCKWSHwrpdFNB/w+ohKKRKrLgasuv8G3jWkJUne+MynmQh8+iudlPg==",
+      "path": "microsoft.entityframeworkcore.relational/3.1.29",
+      "hashPath": "microsoft.entityframeworkcore.relational.3.1.29.nupkg.sha512"
     },
     "Microsoft.EntityFrameworkCore.SqlServer/3.1.25": {
       "type": "package",
@@ -4139,12 +4172,12 @@
       "path": "microsoft.entityframeworkcore.sqlserver/3.1.25",
       "hashPath": "microsoft.entityframeworkcore.sqlserver.3.1.25.nupkg.sha512"
     },
-    "Microsoft.EntityFrameworkCore.Tools/3.1.25": {
+    "Microsoft.EntityFrameworkCore.Tools/3.1.29": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-GlynMdJPCfLTTZA24gaPeaDOJm/FGQA9TovXQ1xdzUorP6GYtAymGbfMTGLsdQX8PMwT13LnaH/O6EfV6UA0Xw==",
-      "path": "microsoft.entityframeworkcore.tools/3.1.25",
-      "hashPath": "microsoft.entityframeworkcore.tools.3.1.25.nupkg.sha512"
+      "sha512": "sha512-XJdOkmW5O0/6HJ7hiOwaSD6IH1Lvmxtfp7nN14wMhhI5A0u5a2e312WfR8OA+0CYmz6PWApKLxfLphQPwLESew==",
+      "path": "microsoft.entityframeworkcore.tools/3.1.29",
+      "hashPath": "microsoft.entityframeworkcore.tools.3.1.29.nupkg.sha512"
     },
     "Microsoft.Extensions.ApiDescription.Server/6.0.5": {
       "type": "package",
@@ -5202,6 +5235,13 @@
       "sha512": "sha512-MYoTCP7EZ98RrANESW05J5ZwskKDoN0AuZ06ZflnowE50LTpbR5yRg3tHckTVm5j/m47stuGgCrCHWePyHS70Q==",
       "path": "system.xml.xmlserializer/4.3.0",
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    },
+    "XAct.Core.PCL/0.0.5014": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-r0rX5Dzr0mfUp8FtVnxXlv5w+cXhz6tHfQ79lf6naLB92J+h2wkGw0q6CfOa2FiveN2ahSflf6LB2G1cOx43AQ==",
+      "path": "xact.core.pcl/0.0.5014",
+      "hashPath": "xact.core.pcl.0.0.5014.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Antiforgery/3.1.0.0": {
       "type": "referenceassembly",

@@ -12,6 +12,7 @@
                 <td>Дата выдачи</td>
                 <td>Срок действия</td>
                 <td>Период</td>
+                <td>Цифровая подпись</td>
                 <td></td>
             </tr>
         </thead>
@@ -23,6 +24,7 @@
                     <td>{{item?.issueDate}}</td>
                     <td>{{item?.validity}}</td>
                     <td>{{item?.period}}</td>
+                    <td>{{item?.digitalSignature}}</td>
                     <td>
                         <button class="btn btn-sm btn-success" (click)="editLicense(item)">Изменить</button>
                         <button class="btn btn-sm btn-danger" (click)="delete(item)">Удалить</button>
@@ -49,6 +51,7 @@
         <td>
             <input type="number" [(ngModel)]="license.period" class="form-control" />
         </td>
+        <td>{{license.digitalSignature}}</td>
         <td>
             <input type="button" value="Сохранить" (click)="save()" class="btn btn-sm btn-success" />
             <input type="button" value="Отмена" (click)="cancel()" class="btn btn-sm btn-warning" />

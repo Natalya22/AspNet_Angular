@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using License.Models;
+using XSystem.Security.Cryptography;
+using System.Text;
 
 namespace License.Controllers
 {
@@ -50,6 +52,12 @@ namespace License.Controllers
                 return NotFound();
             }
 
+            license.DigitalSignature = GetHash(license.Organization
+                                                + license.SerialNumber
+                                                + license.IssueDate.ToString()
+                                                + license.Validity.ToString()
+                                                + license.period.ToString());
+
             _context.Entry(license).State = EntityState.Modified;
 
             try
@@ -68,7 +76,14 @@ namespace License.Controllers
         [HttpPost]
         public async Task<ActionResult<License.Models.License>> PostLicense(License.Models.License license)
         {
+            license.DigitalSignature = GetHash(license.Organization
+                                                + license.SerialNumber
+                                                + license.IssueDate.ToString()
+                                                + license.Validity.ToString()
+                                                + license.period.ToString());
+
             _context.Licenses.Add(license);
+
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetLicense", new { id = license.Id }, license);
@@ -93,6 +108,13 @@ namespace License.Controllers
         private bool LicenseExists(int id)
         {
             return _context.Licenses.Any(e => e.Id == id);
+        }
+
+        private string GetHash(string plaintext)
+        {
+            var sha = new SHA1Managed();
+            byte[] hash = sha.ComputeHash(Encoding.UTF8.GetBytes(plaintext));
+            return Convert.ToBase64String(hash);
         }
     }
 }
