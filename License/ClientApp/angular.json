@@ -14,8 +14,7 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.json",
-            "aot": true,
-            "styles": ["node_modules/bootstrap/dist/css/bootstrap.min.css"]
+            "aot": true
           },
           "configurations": {
             "production": {
