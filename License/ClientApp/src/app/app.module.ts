@@ -13,6 +13,8 @@ import { SignInComponent } from './user/sign-in/sign-in.component';
 import { SignUpComponent } from './user/sign-up/sign-up.component';
 import { LicenseComponent } from './license/license.component';
 import { appRoutes } from './routes';
+import { AuthGuard } from './auth/auth.guard';
+import { AuthInterceptor } from './auth/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,14 @@ import { appRoutes } from './routes';
     RouterModule.forRoot(appRoutes),
   ],
   providers: [UserService, 
-    LicenseService],
+    LicenseService,
+    AuthGuard,
+    ,
+    {
+      provide : HTTP_INTERCEPTORS,
+      useClass : AuthInterceptor,
+      multi : true
+    }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
