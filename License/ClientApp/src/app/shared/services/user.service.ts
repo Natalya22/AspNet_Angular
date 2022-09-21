@@ -8,23 +8,16 @@ export class UserService {
   private url = "/api/users";
   constructor(private http: HttpClient) { }
 
-  getUserClaims(){
-    return  this.http.get(this.url);
-   }
-
-   getUserProfile() {
-    return this.http.get(this.url + '/UserProfile');
+  register(formData) {
+    return this.http.post(this.url + '/Register', formData);
   }
 
-  register(user: User) {
-    var reqHeader = new HttpHeaders({'No-Auth':'True'});
-    return this.http.post(this.url + '/Register', user, {headers : reqHeader});
+  login(formData) {
+    return this.http.post(this.url + '/Login', formData);
   }
 
-  userAuthentication(userName, password) {
-    var data = "username=" + userName + "&password=" + password + "&grant_type=password";
-    var reqHeader = new HttpHeaders({ 'Content-Type': 'application/x-www-urlencoded','No-Auth':'True' });
-    return this.http.post(this.url + '/token', data, { headers: reqHeader });
+  getUsers() {
+    return this.http.get(this.url);
   }
 
 }

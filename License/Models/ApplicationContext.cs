@@ -6,9 +6,7 @@ namespace License.Models
     {
         public ApplicationContext(DbContextOptions<ApplicationContext> options) : base(options)
         {
-            Database.EnsureCreated();
         }
         public DbSet<License> Licenses { get; set; }
-        public DbSet<User> Users { get; set; }
     }
 }

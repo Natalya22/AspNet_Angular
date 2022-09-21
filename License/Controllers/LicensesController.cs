@@ -8,11 +8,13 @@ using Microsoft.EntityFrameworkCore;
 using License.Models;
 using XSystem.Security.Cryptography;
 using System.Text;
+using Microsoft.AspNetCore.Authorization;
 
 namespace License.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class LicensesController : ControllerBase
     {
         private readonly ApplicationContext _context;

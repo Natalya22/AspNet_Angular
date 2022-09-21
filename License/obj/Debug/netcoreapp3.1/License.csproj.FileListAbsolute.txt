@@ -8,6 +8,7 @@ C:\Users\Lenovo\Desktop\homeProject\LicenseProject\License\License\bin\Debug\net
 C:\Users\Lenovo\Desktop\homeProject\LicenseProject\License\License\bin\Debug\netcoreapp3.1\License.dll
 C:\Users\Lenovo\Desktop\homeProject\LicenseProject\License\License\bin\Debug\netcoreapp3.1\License.pdb
 C:\Users\Lenovo\Desktop\homeProject\LicenseProject\License\License\bin\Debug\netcoreapp3.1\Microsoft.Practices.ServiceLocation.dll
+C:\Users\Lenovo\Desktop\homeProject\LicenseProject\License\License\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\Lenovo\Desktop\homeProject\LicenseProject\License\License\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.NodeServices.dll
 C:\Users\Lenovo\Desktop\homeProject\LicenseProject\License\License\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Razor.Language.dll
 C:\Users\Lenovo\Desktop\homeProject\LicenseProject\License\License\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.SpaServices.dll
@@ -49,6 +50,9 @@ C:\Users\Lenovo\Desktop\homeProject\LicenseProject\License\License\bin\Debug\net
 C:\Users\Lenovo\Desktop\homeProject\LicenseProject\License\License\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\Lenovo\Desktop\homeProject\LicenseProject\License\License\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
 C:\Users\Lenovo\Desktop\homeProject\LicenseProject\License\License\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\Users\Lenovo\Desktop\homeProject\LicenseProject\License\License\bin\Debug\netcoreapp3.1\Microsoft.Owin.dll
+C:\Users\Lenovo\Desktop\homeProject\LicenseProject\License\License\bin\Debug\netcoreapp3.1\Microsoft.Owin.Security.dll
+C:\Users\Lenovo\Desktop\homeProject\LicenseProject\License\License\bin\Debug\netcoreapp3.1\Microsoft.Owin.Security.OAuth.dll
 C:\Users\Lenovo\Desktop\homeProject\LicenseProject\License\License\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.dll
 C:\Users\Lenovo\Desktop\homeProject\LicenseProject\License\License\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll
 C:\Users\Lenovo\Desktop\homeProject\LicenseProject\License\License\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
@@ -59,6 +63,7 @@ C:\Users\Lenovo\Desktop\homeProject\LicenseProject\License\License\bin\Debug\net
 C:\Users\Lenovo\Desktop\homeProject\LicenseProject\License\License\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
 C:\Users\Lenovo\Desktop\homeProject\LicenseProject\License\License\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 C:\Users\Lenovo\Desktop\homeProject\LicenseProject\License\License\bin\Debug\netcoreapp3.1\NuGet.Frameworks.dll
+C:\Users\Lenovo\Desktop\homeProject\LicenseProject\License\License\bin\Debug\netcoreapp3.1\Owin.dll
 C:\Users\Lenovo\Desktop\homeProject\LicenseProject\License\License\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\Lenovo\Desktop\homeProject\LicenseProject\License\License\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\Lenovo\Desktop\homeProject\LicenseProject\License\License\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -147,7 +152,3 @@ C:\Users\Lenovo\Desktop\homeProject\LicenseProject\License\License\obj\Debug\net
 C:\Users\Lenovo\Desktop\homeProject\LicenseProject\License\License\obj\Debug\netcoreapp3.1\License.dll
 C:\Users\Lenovo\Desktop\homeProject\LicenseProject\License\License\obj\Debug\netcoreapp3.1\License.pdb
 C:\Users\Lenovo\Desktop\homeProject\LicenseProject\License\License\obj\Debug\netcoreapp3.1\License.genruntimeconfig.cache
-C:\Users\Lenovo\Desktop\homeProject\LicenseProject\License\License\bin\Debug\netcoreapp3.1\Microsoft.Owin.dll
-C:\Users\Lenovo\Desktop\homeProject\LicenseProject\License\License\bin\Debug\netcoreapp3.1\Microsoft.Owin.Security.dll
-C:\Users\Lenovo\Desktop\homeProject\LicenseProject\License\License\bin\Debug\netcoreapp3.1\Microsoft.Owin.Security.OAuth.dll
-C:\Users\Lenovo\Desktop\homeProject\LicenseProject\License\License\bin\Debug\netcoreapp3.1\Owin.dll
