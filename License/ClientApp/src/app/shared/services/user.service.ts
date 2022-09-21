@@ -12,7 +12,11 @@ export class UserService {
     return  this.http.get(this.url);
    }
 
-  registerUser(user: User) {
+   getUserProfile() {
+    return this.http.get(this.url + '/UserProfile');
+  }
+
+  register(user: User) {
     var reqHeader = new HttpHeaders({'No-Auth':'True'});
     return this.http.post(this.url + '/Register', user, {headers : reqHeader});
   }

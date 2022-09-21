@@ -147,3 +147,7 @@ C:\Users\Lenovo\Desktop\homeProject\LicenseProject\License\License\obj\Debug\net
 C:\Users\Lenovo\Desktop\homeProject\LicenseProject\License\License\obj\Debug\netcoreapp3.1\License.dll
 C:\Users\Lenovo\Desktop\homeProject\LicenseProject\License\License\obj\Debug\netcoreapp3.1\License.pdb
 C:\Users\Lenovo\Desktop\homeProject\LicenseProject\License\License\obj\Debug\netcoreapp3.1\License.genruntimeconfig.cache
+C:\Users\Lenovo\Desktop\homeProject\LicenseProject\License\License\bin\Debug\netcoreapp3.1\Microsoft.Owin.dll
+C:\Users\Lenovo\Desktop\homeProject\LicenseProject\License\License\bin\Debug\netcoreapp3.1\Microsoft.Owin.Security.dll
+C:\Users\Lenovo\Desktop\homeProject\LicenseProject\License\License\bin\Debug\netcoreapp3.1\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Lenovo\Desktop\homeProject\LicenseProject\License\License\bin\Debug\netcoreapp3.1\Owin.dll

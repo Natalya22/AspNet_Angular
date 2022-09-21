@@ -33,13 +33,14 @@ import { AuthInterceptor } from './auth/auth.interceptor';
   ],
   providers: [UserService, 
     LicenseService,
-    AuthGuard,
-    ,
-    {
-      provide : HTTP_INTERCEPTORS,
-      useClass : AuthInterceptor,
-      multi : true
-    }],
+    // AuthGuard,
+    // ,
+    // {
+    //   provide : HTTP_INTERCEPTORS,
+    //   useClass : AuthInterceptor,
+    //   multi : true
+    // }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -9,5 +9,6 @@ namespace License.Models
             Database.EnsureCreated();
         }
         public DbSet<License> Licenses { get; set; }
+        public DbSet<User> Users { get; set; }
     }
 }

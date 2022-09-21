@@ -7,8 +7,10 @@ import { SignInComponent } from './user/sign-in/sign-in.component';
 import { AuthGuard } from './auth/auth.guard'
 
 export const appRoutes: Routes = [
-    { path: 'home', component: HomeComponent, canActivate:[AuthGuard]},
-    { path: 'license', component: LicenseComponent, canActivate:[AuthGuard]},
+    // { path: 'home', component: HomeComponent, canActivate:[AuthGuard]},
+    // { path: 'license', component: LicenseComponent, canActivate:[AuthGuard]},
+    { path: 'home', component: HomeComponent},
+    { path: 'license', component: LicenseComponent},
     {
         path: 'signup', component: UserComponent,
         children: [{ path: '', component: SignUpComponent }]
