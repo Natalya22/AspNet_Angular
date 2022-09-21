@@ -8,5 +8,6 @@ namespace License.Models
         {
         }
         public DbSet<License> Licenses { get; set; }
+        public DbSet<User> Users { get; set; }
     }
 }

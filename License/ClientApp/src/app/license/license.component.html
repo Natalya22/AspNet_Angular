@@ -22,7 +22,7 @@
                         <td>{{item?.serialNumber}}</td>
                         <td>{{item?.issueDate}}</td>
                         <td>{{item?.validity}}</td>
-                        <td>{{item?.period}}</td>
+                        <td>{{getPeriod(item)}}</td>
                         <td>{{item?.digitalSignature}}</td>
                         <td>
                             <button class="btn btn-sm" (click)="editLicense(item)">Изменить</button>
@@ -33,7 +33,7 @@
             </tbody>
         </table>
     </div>
-     
+
     <!--шаблон для редактирования-->
     <ng-template #edit>
         <td>

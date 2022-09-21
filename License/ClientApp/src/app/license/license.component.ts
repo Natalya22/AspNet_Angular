@@ -1,6 +1,8 @@
 import { Component, OnInit} from '@angular/core';
 import { LicenseService } from '../shared/services/license.service'
 import { License } from '../shared/models/license.model';
+import { Period } from '../shared/enums/period';
+import { SourceMap } from 'module';
 
 @Component({
     selector: 'license',
@@ -12,8 +14,23 @@ export class LicenseComponent implements OnInit {
     license: License = new License();
     licenses: License[] = [];
     tableMode: boolean = true;
+    periods: any = ['hour', 'day', 'month']
+    selected: any;
 
     constructor(private licenseService: LicenseService) {}
+
+    getPeriod(license: License): string {
+        if (license.period != null){
+            switch (license.period){
+                case Period.hour: return 'hour';
+                case Period.day: return 'day';
+                case Period.month: return 'month';
+            }
+        }
+        else {
+            return null;
+        }
+    }
 
     ngOnInit(): void {
         this.loadLicenses();

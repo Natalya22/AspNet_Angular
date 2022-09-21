@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
-  templateUrl: './homeTest.component.html'
+  templateUrl: './home.component.html'
 })
 export class HomeComponent implements OnInit {
   userDetails: any;

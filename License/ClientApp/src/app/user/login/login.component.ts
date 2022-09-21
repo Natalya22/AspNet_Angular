@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     if (localStorage.getItem('token') != null) {
-      this.router.navigateByUrl('/home');
+      this.router.navigateByUrl('/license');
     }
   }
 
@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
       .subscribe(
         (data : any) => {
           localStorage.setItem('token',data.token);
-          this.router.navigateByUrl('/home');
+          this.router.navigateByUrl('/license');
         },
         (err : HttpErrorResponse)=>{
           this.isLoginError = true;

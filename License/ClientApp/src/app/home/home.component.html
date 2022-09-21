@@ -1,13 +1,12 @@
-<nav class="navbar navbar-dark bg-dark">
-  <a class="navbar-brand text-white">Your author's data</a>
+<div style="padding: 1rem;">
+  <h3>Your author's data</h3>
+  <div class="card m-5" style="width:18rem" *ngIf="userDetails">
+    <ul class="list-group" *ngFor="let user of userDetails">
+      <li class="list-group-item"><strong>Username : </strong>{{user.userName}}</li>
+      <li class="list-group-item"><strong>First name : </strong>{{user.firstName}}</li>
+      <li class="list-group-item"><strong>Last name : </strong>{{user.lastName}}</li>
+      <li class="list-group-item"><strong>Email : </strong>{{user.email}}</li>
+    </ul>
+  </div>
   <button class="btn btn-danger my-2 my-sm-0" (click)="onLogout()">Logout</button>
-</nav>
-
-<div class="card m-5" style="width:18rem" *ngIf="userDetails">
-  <ul class="list-group">
-    <li class="list-group-item"><strong>Username : </strong>{{userDetails.userName}}</li>
-    <li class="list-group-item"><strong>First name : </strong>{{userDetails.firstName}}</li>
-    <li class="list-group-item"><strong>Last name : </strong>{{userDetails.lastName}}</li>
-    <li class="list-group-item"><strong>Email : </strong>{{userDetails.email}}</li>
-  </ul>
 </div>
