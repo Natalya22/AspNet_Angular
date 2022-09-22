@@ -3,6 +3,8 @@ import { LicenseService } from '../shared/services/license.service'
 import { License } from '../shared/models/license.model';
 import { Period } from '../shared/enums/period';
 import { SourceMap } from 'module';
+import { Router } from '@angular/router';
+import * as M from 'materialize-css';
 
 @Component({
     selector: 'license',
@@ -14,25 +16,27 @@ export class LicenseComponent implements OnInit {
     license: License = new License();
     licenses: License[] = [];
     tableMode: boolean = true;
-    periods: any = ['hour', 'day', 'month']
     selected: any;
+    loading: boolean = true;
+    periods: any = [
+        {id: Period.hour, value: 'час'},
+        {id: Period.day, value: 'день'},
+        {id: Period.month, value: 'месяц'}
+    ]
 
-    constructor(private licenseService: LicenseService) {}
+    constructor(private licenseService: LicenseService, private router: Router) {}
 
     getPeriod(license: License): string {
-        if (license.period != null){
-            switch (license.period){
-                case Period.hour: return 'hour';
-                case Period.day: return 'day';
-                case Period.month: return 'month';
-            }
-        }
-        else {
-            return null;
-        }
+        return license?.period != null 
+              ? this.periods.find(x => x.id === license.period).value
+              : null;
     }
 
     ngOnInit(): void {
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('select');
+            var instances = M.FormSelect.init(elems, {});
+          });
         this.loadLicenses();
     }
     
@@ -41,6 +45,7 @@ export class LicenseComponent implements OnInit {
         .getLicenses()
         .subscribe((data: License[]) => {
             this.licenses = data
+            this.loading = false;
         });
     }
 
@@ -100,5 +105,9 @@ export class LicenseComponent implements OnInit {
                 }
             }
         }
+    }
+    onLogout() {
+        localStorage.removeItem('token');
+        this.router.navigate(['/user/login']);
     }
 }

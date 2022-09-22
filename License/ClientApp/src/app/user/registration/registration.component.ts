@@ -11,6 +11,8 @@ import { UserService } from '../../shared/services/user.service';
 export class RegistrationComponent implements OnInit {
   user: User;
   emailPattern = "^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$";
+  isRegistrationSuccessfull: boolean = false;
+  errorMsg: string;
 
   constructor(private userService: UserService) { }
 
@@ -31,17 +33,18 @@ export class RegistrationComponent implements OnInit {
   }
 
   onSubmit(form: NgForm) {
+    this.errorMsg = null;
     this.userService
       .register(form.value)
-      .subscribe((data: any) => {
-        if (data.Succeeded == true) {
+      .subscribe(
+        res => {
           this.resetForm(form);
-          Notify.success('User registration successful');
-        }
-        else {
-          Notify.failure(data.Errors[0]);
-        }
-      });
+          this.isRegistrationSuccessfull = true;
+        },
+        err => {
+          this.errorMsg = err.error;
+          console.log(err);
+        },);
   }
 
 }
